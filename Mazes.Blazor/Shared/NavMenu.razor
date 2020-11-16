@@ -1,0 +1,23 @@
+﻿
+
+<div class="w-100 navbar navbar-expand-lg navbar-light bg-light" @onclick="ToggleNavMenu">
+    <a class="navbar-brand" href="">Mazes</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <NavLink class="nav-link" href="mazes">
+                <span  aria-hidden="true"></span> Maze Generator
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
